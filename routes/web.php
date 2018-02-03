@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::prefix('admin')->group(function () {
+	Route::get('/', 'PostController@dashboard');
 	Route::get('posts', 'PostController@index');
 	Route::get('posts/new', 'PostController@viewNewPostForm');
 	Route::post('posts', 'PostController@saveNewPost');
