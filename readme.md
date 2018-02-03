@@ -2,8 +2,19 @@
 
 ## Installation
 
+Create a `.env` file. You can copy the `.env.example` file. The DB details need to updated.
+
+````
+DB_DATABASE=rohit_blog
+DB_USERNAME=root
+DB_PASSWORD=
+````
+
+Then run the following commands to finish up.
 ````
 $ composer install
 $ php artisan migrate --seed
 $ php artisan serve
 ````
+
+Two users are seeded - rohit.admin@gmail.com and rohit.user@gmail.com. Password for both is `secret`.
