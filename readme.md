@@ -13,6 +13,7 @@ DB_PASSWORD=
 Then run the following commands to finish up.
 ````
 $ composer install
+$ php artisan key:generate
 $ php artisan migrate --seed
 $ php artisan serve
 ````
